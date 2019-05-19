@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>CS4220 Final</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h4 class="display-4">
+                My Location
+            </h4>
+            <p class="lead">Enter your latitude and longitude to display your location on a Google Map</p>
+            <hr>
+            <form>
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" name="lat" id="lat" placeholder="Latitude" class="form-control">
+                    </div>
+                    <div class="col">
+                        <input type="text" name="lon" id="lon" placeholder="Longitude" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div id = "map" class="col">
+                        <button v-on:click="getLocation('lat','lon');" class="btn btn-primary mt-4"> Show My Location</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <my-map lat="34.066445" lon="-118.166670"></my-map>
+        <img src = 'https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=600x300&maptype=roadmap%20&markers=color:red%7Clabel:C%7C${coordinates}%20&key=AIzaSyA0zfP5tU-Drqkijz6uoKqyc1cwQ64i60Q'/>
+
+    </div>
+</body>
+</html>
+
+
+
+// API key = AIzaSyA0zfP5tU-Drqkijz6uoKqyc1cwQ64i60Q
